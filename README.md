@@ -26,13 +26,46 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map automatically returns a new array, it's used for converting data, and it needs the return keyword. 
+<!-- const bigPopCities = bigPops.map(function(item){
+return item.city;
+});
+console.log(bigPopCities); -->
+
+.reduce returns a single value not an array, it takes 2 arguments: the accumulator and the current value and it's used for sums/products. 
+
+<!-- const totalLandArea = cityData.reduce(function(acc, item){
+return acc + item.land_area;
+},0);
+console.log(`I am the total Land area ${totalLandArea}`); -->
+
+.filter returns an array automatically, it filters results to the new array based on something that could be true or false and it needs a return statement.
+
+<!-- const bigPops = cityData.filter(function(item){
+return item.population > 500000;
+});
+
+console.log(bigPops); -->
+
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback is the function that is passed into a higher order function
 
 3. Explain what a closure is.
 
+A closure happens when a function in our inner scope references a variable created in our outer scope.
+
 4. Describe the four principles of the 'this' keyword.
 
+1. Window/global object binding: The 'this' value is the window/console object in this instance.
+2. Implicit Binding: The 'this' value is whatever is to the left of the dot.
+3. New Binding: If you use a constructor function, the 'this' value will refer to the instance of the object created and it will be returned by the constructor function.
+4. Explicit Binding: When you use the .call or .apply method, the 'this' value is defined explicitly.
+
 5. Why do we need super() in an extended class?
+
+It calls the parent constructor and it accesses the properties and methods of the parent.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
